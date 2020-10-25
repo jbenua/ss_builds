@@ -3,9 +3,11 @@ name: django
 
 on:
   workflow_dispatch:
-  pull_request:
-    branches:
-      - develop
+    inputs:
+      name:
+        description: 'Foo'
+        required: false
+        default: 'bar'
 jobs:
   build:
 
